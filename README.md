@@ -1,9 +1,9 @@
 # Banking-Application
 
 This is a console application which reflects real banking processes like:
-- new customer registration\n
-- account creation\n
-- depositing funds\n
-- withdrawing funds\n 
-- transferring funds\n
+- new customer registration
+- account creation
+- depositing funds
+- withdrawing funds
+- transferring funds
 - etc.
