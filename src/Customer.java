@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Customer {
 
     /**
@@ -19,4 +21,9 @@ public class Customer {
      * The password of this customer.
      */
     private String password;
+
+    /**
+     * The list of accounts of this customer.
+     */
+    private List<Account> accounts;
 }
