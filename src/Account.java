@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Account {
 
     /**
@@ -19,4 +21,9 @@ public class Account {
      * The owner of this account.
      */
     private Customer owner;
+
+    /**
+     * The list of transactions executed in this account.
+     */
+    private List<Transaction> transactions;
 }
