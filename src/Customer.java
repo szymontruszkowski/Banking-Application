@@ -28,6 +28,13 @@ public class Customer {
      */
     private List<Account> accounts;
 
+    /**
+     * Create a new Customer object.
+     * @param firstName     the first name of the customer
+     * @param lastName      the last name of the customer
+     * @param password      the password of the customer
+     * @param theBank       the bank which the customer is registered in
+     */
     public Customer(String firstName, String lastName, String password, String theBank) {
 
         this.firstName = firstName;
