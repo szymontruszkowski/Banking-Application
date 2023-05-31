@@ -43,6 +43,9 @@ public class Customer {
         this.password = password;
         accounts = new ArrayList<>();
 
-        System.out.println("New customer registered.");
+        System.out.printf("""
+                
+                You have been successfully registered.\s
+                Your ID number is %s.""", id);
     }
 }
