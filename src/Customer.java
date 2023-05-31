@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
@@ -13,7 +14,7 @@ public class Customer {
     private String lastName;
 
     /**
-     * The id number of this customer.
+     * The ID number of this customer.
      */
     private String id;
 
@@ -26,4 +27,15 @@ public class Customer {
      * The list of accounts of this customer.
      */
     private List<Account> accounts;
+
+    public Customer(String firstName, String lastName, String password, String theBank) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        id = theBank.getNewCustomerID();
+        this.password = password;
+        accounts = new ArrayList<>();
+
+        System.out.println("New customer registered.");
+    }
 }
