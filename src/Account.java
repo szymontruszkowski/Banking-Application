@@ -28,6 +28,13 @@ public class Account {
      */
     private List<Transaction> transactions;
 
+    /**
+     * Create a new Account object.
+     * @param type              the type of the account
+     * @param currency          the currency of the account
+     * @param theCustomer       the owner of the account
+     * @param theBank           the bank which the account is registered in
+     */
     public Account(String type, String currency, Customer theCustomer, Bank theBank) {
 
         this.type = type;
