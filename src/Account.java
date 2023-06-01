@@ -42,5 +42,7 @@ public class Account {
         this.currency = currency;
         owner = theCustomer;
         transactions = new ArrayList<>();
+
+        System.out.printf("\nNew %s account has been successfully created with ID %s.\n", type.toLowerCase(), id);
     }
 }
