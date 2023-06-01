@@ -21,4 +21,12 @@ public class Transaction {
      * The bank account in which this transaction is executed.
      */
     private Account account;
+
+    public Transaction (double amount, String title, Account theAccount) {
+
+        this.amount = amount;
+        date = new Date();
+        this.title = title;
+        account = theAccount;
+    }
 }
