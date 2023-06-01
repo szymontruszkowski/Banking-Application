@@ -22,6 +22,12 @@ public class Transaction {
      */
     private Account account;
 
+    /**
+     * Create a new Transaction object.
+     * @param amount            the amount of the transaction
+     * @param title             the title of the transaction
+     * @param theAccount        the account which the transaction is executed
+     */
     public Transaction (double amount, String title, Account theAccount) {
 
         this.amount = amount;
