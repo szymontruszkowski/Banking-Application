@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Bank {
 
@@ -27,5 +28,31 @@ public class Bank {
         this.name = name;
         customers = new ArrayList<>();
         accounts = new ArrayList<>();
+    }
+
+    public String getNewCustomerID() {
+
+        String id;
+        Random random = new Random();
+        int length = 5;
+        boolean nonUnique;
+
+        do {
+
+            id = "";
+            for (int c = 0; c <= length; c++) {
+                id += ((Integer)random.nextInt(10)).toString());
+            }
+
+            nonUnique = false;
+            for (Customer c : customers) {
+                if (id.compareTo(c.getID()) == 0) {
+                    nonUnique = true;
+                    break;
+                }
+            }
+        } while (nonUnique);
+
+        return id;
     }
 }
