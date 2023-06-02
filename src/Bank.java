@@ -18,6 +18,10 @@ public class Bank {
      */
     private List<Account> accounts;
 
+    /**
+     * Create a new Bank object.
+     * @param name      the name of the bank
+     */
     public Bank(String name) {
 
         this.name = name;
