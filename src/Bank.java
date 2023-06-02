@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
@@ -16,4 +17,11 @@ public class Bank {
      * The list of accounts of this bank.
      */
     private List<Account> accounts;
+
+    public Bank(String name) {
+
+        this.name = name;
+        customers = new ArrayList<>();
+        accounts = new ArrayList<>();
+    }
 }
