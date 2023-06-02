@@ -30,6 +30,10 @@ public class Bank {
         accounts = new ArrayList<>();
     }
 
+    /**
+     * Get the unique ID number for a new customer.
+     * @return      the ID number
+     */
     public String getNewCustomerID() {
 
         String id;
