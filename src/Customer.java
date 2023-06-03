@@ -35,7 +35,7 @@ public class Customer {
      * @param password      the password of the customer
      * @param theBank       the bank which the customer is registered in
      */
-    public Customer(String firstName, String lastName, String password, String theBank) {
+    public Customer(String firstName, String lastName, String password, Bank theBank) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -48,4 +48,6 @@ public class Customer {
                 You have been successfully registered.\s
                 Your ID number is %s.""", id);
     }
+
+
 }
