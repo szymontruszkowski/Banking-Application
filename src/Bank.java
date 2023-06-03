@@ -45,7 +45,7 @@ public class Bank {
 
             id = "";
             for (int c = 0; c <= length; c++) {
-                id += ((Integer)random.nextInt(10)).toString());
+                id += ((Integer)random.nextInt(10)).toString();
             }
 
             nonUnique = false;
