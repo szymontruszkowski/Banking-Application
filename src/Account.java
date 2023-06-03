@@ -45,4 +45,8 @@ public class Account {
 
         System.out.printf("\nNew %s account has been successfully created with ID %s.\n", type.toLowerCase(), id);
     }
+
+    public String getID() {
+        return id;
+    }
 }
