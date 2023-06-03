@@ -48,7 +48,11 @@ public class Customer {
                 You have been successfully registered.\s
                 Your ID number is %s.""", id);
     }
-    
+
+    /**
+     * Get the ID number of the customer.
+     * @return      the ID number
+     */
     public String getID() {
         return id;
     }
