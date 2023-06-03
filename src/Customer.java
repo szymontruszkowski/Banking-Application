@@ -48,6 +48,8 @@ public class Customer {
                 You have been successfully registered.\s
                 Your ID number is %s.""", id);
     }
-
-
+    
+    public String getID() {
+        return id;
+    }
 }
