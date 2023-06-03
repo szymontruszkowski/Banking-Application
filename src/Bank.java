@@ -60,6 +60,10 @@ public class Bank {
         return id;
     }
 
+    /**
+     * Get the unique ID number for a new account.
+     * @return      the ID number
+     */
     public String getNewAccountID() {
 
         String id;
@@ -86,5 +90,5 @@ public class Bank {
 
         return id;
     }
-    
+
 }
