@@ -37,25 +37,12 @@ public class Bank {
     public String getNewCustomerID() {
 
         String id;
-        Random random = new Random();
-        int length = 5;
-        boolean nonUnique;
+        boolean isUnique;
 
         do {
-
-            id = "";
-            for (int c = 0; c <= length; c++) {
-                id += ((Integer)random.nextInt(10)).toString();
-            }
-
-            nonUnique = false;
-            for (Customer c : customers) {
-                if (id.compareTo(c.getID()) == 0) {
-                    nonUnique = true;
-                    break;
-                }
-            }
-        } while (nonUnique);
+            id = getNewID(5);
+            isUnique = isUnique(id, "customer");
+        } while (!isUnique);
 
         return id;
     }
