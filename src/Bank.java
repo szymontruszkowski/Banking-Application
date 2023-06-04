@@ -78,4 +78,20 @@ public class Bank {
         return id;
     }
 
+    /**
+     * Get randomly generated ID number.
+     * @param length    the length of ID number
+     * @return          the ID number
+     */
+    private String getNewID(int length) {
+
+        Random random = new Random();
+        String id = "";
+
+        for (int d = 0; d <= length; d++) {
+            id += ((Integer)random.nextInt(10)).toString();
+        }
+        return id;
+    }
+
 }
