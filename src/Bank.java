@@ -54,26 +54,12 @@ public class Bank {
     public String getNewAccountID() {
 
         String id;
-        Random rng = new Random();
-        int length = 10;
-        boolean nonUnique;
+        boolean isUnique;
 
         do {
-
-            id = "";
-            for (int c = 0; c < length; c++) {
-                id += ((Integer)rng.nextInt(10)).toString();
-            }
-
-            nonUnique = false;
-            for (Account a : this.accounts) {
-                if (id.compareTo(a.getID()) == 0) {
-                    nonUnique = true;
-                    break;
-                }
-            }
-
-        } while (nonUnique);
+            id = getNewID(10);
+            isUnique = isUnique(id, "account");
+        } while (!isUnique);
 
         return id;
     }
