@@ -94,4 +94,30 @@ public class Bank {
         return id;
     }
 
+    /**
+     * Check if the ID is unique.
+     * @param id        the ID number to be checked
+     * @param holder    the holder of the ID number (customer or account)
+     * @return          true, if the ID number is unique, or false, if it is not
+     */
+    private boolean isUnique(String id, String holder) {
+
+        switch (holder) {
+            case "customer":
+            for (Customer c : customers) {
+                if (id.compareTo(c.getID()) == 0) {
+                    return false;
+                }
+            }
+
+            case "account":
+            for (Account a : accounts) {
+                if (id.compareTo(a.getID()) == 0) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 }
