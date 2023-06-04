@@ -81,7 +81,7 @@ public class Bank {
     }
 
     /**
-     * Check if the ID is unique.
+     * Check if the ID number is unique.
      * @param id        the ID number to be checked
      * @param holder    the holder of the ID number (customer or account)
      * @return          true, if the ID number is unique, or false, if it is not
