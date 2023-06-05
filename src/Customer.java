@@ -57,6 +57,10 @@ public class Customer {
         return id;
     }
 
+    /**
+     * Add a new account to the list of accounts.
+     * @param newAccount        the account to add
+     */
     public void addNewAccount(Account newAccount) {
         accounts.add(newAccount);
     }
