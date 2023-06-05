@@ -108,7 +108,7 @@ public class Bank {
     }
 
     /**
-     * Create a new Customer object and add it to the list of the customers.
+     * Create a new Customer object and add it to the list of customers.
      * @param firstName     the first name of the customer
      * @param lastName      the last name of the customer
      * @param password      the password of the customer
@@ -122,6 +122,10 @@ public class Bank {
         return newCustomer;
     }
 
+    /**
+     * Add a new account to the list of accounts.
+     * @param newAccount        the account to add
+     */
     public void addNewAccount(Account newAccount) {
         accounts.add(newAccount);
     }
