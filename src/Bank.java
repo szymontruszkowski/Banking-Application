@@ -106,4 +106,12 @@ public class Bank {
 
         return true;
     }
+
+    public Customer addNewCustomer(String firstName, String lastName, String password) {
+
+        Customer newCustomer = new Customer(firstName, lastName, password, this);
+        customers.add(newCustomer);
+
+        return newCustomer;
+    }
 }
