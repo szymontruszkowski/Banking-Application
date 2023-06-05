@@ -56,4 +56,8 @@ public class Customer {
     public String getID() {
         return id;
     }
+
+    public void addNewAccount(Account newAccount) {
+        accounts.add(newAccount);
+    }
 }
