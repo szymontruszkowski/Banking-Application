@@ -121,4 +121,8 @@ public class Bank {
 
         return newCustomer;
     }
+
+    public void addNewAccount(Account newAccount) {
+        accounts.add(newAccount);
+    }
 }
