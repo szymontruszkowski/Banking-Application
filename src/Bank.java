@@ -107,6 +107,13 @@ public class Bank {
         return true;
     }
 
+    /**
+     * Create a new Customer object and add it to the list of the customers.
+     * @param firstName     the first name of the customer
+     * @param lastName      the last name of the customer
+     * @param password      the password of the customer
+     * @return              a new Customer object
+     */
     public Customer addNewCustomer(String firstName, String lastName, String password) {
 
         Customer newCustomer = new Customer(firstName, lastName, password, this);
