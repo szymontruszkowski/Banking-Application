@@ -64,4 +64,8 @@ public class Customer {
     public void addNewAccount(Account newAccount) {
         accounts.add(newAccount);
     }
+
+    public String getPassword() {
+        return password;
+    }
 }
