@@ -130,6 +130,13 @@ public class Bank {
         accounts.add(newAccount);
     }
 
+    /**
+     * Get the Customer object associated with a particular login data.
+     * @param id            the provided ID number
+     * @param password      the provided password
+     * @return              the Customer object, if login data are correct, or null,
+     *                      if they are not
+     */
     public Customer checkLoginData(String id, String password) {
 
         for (Customer customer : customers) {
