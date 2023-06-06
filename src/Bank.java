@@ -40,7 +40,7 @@ public class Bank {
         boolean isUnique;
 
         do {
-            id = getNewID(5);
+            id = getNewId(5);
             isUnique = isUnique(id, "customer");
         } while (!isUnique);
 
