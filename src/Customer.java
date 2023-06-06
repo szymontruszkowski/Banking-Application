@@ -65,6 +65,10 @@ public class Customer {
         accounts.add(newAccount);
     }
 
+    /**
+     * Get the password of the customer.
+     * @return      the password
+     */
     public String getPassword() {
         return password;
     }
