@@ -38,7 +38,7 @@ public class Account {
     public Account(String type, String currency, Customer theCustomer, Bank theBank) {
 
         this.type = type;
-        id = theBank.getNewAccountID();
+        id = theBank.getNewAccountId();
         this.currency = currency;
         owner = theCustomer;
         transactions = new ArrayList<>();
@@ -50,7 +50,7 @@ public class Account {
      * Get the ID number of the account.
      * @return      the ID number
      */
-    public String getID() {
+    public String getId() {
         return id;
     }
 }

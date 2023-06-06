@@ -34,7 +34,7 @@ public class Bank {
      * Get the unique ID number for a new customer.
      * @return      the ID number
      */
-    public String getNewCustomerID() {
+    public String getNewCustomerId() {
 
         String id;
         boolean isUnique;
@@ -51,13 +51,13 @@ public class Bank {
      * Get the unique ID number for a new account.
      * @return      the ID number
      */
-    public String getNewAccountID() {
+    public String getNewAccountId() {
 
         String id;
         boolean isUnique;
 
         do {
-            id = getNewID(10);
+            id = getNewId(10);
             isUnique = isUnique(id, "account");
         } while (!isUnique);
 
@@ -69,7 +69,7 @@ public class Bank {
      * @param length    the length of ID number
      * @return          the ID number
      */
-    private String getNewID(int length) {
+    private String getNewId(int length) {
 
         Random random = new Random();
         String id = "";
@@ -91,14 +91,14 @@ public class Bank {
         switch (holder) {
             case "customer":
             for (Customer c : customers) {
-                if (id.compareTo(c.getID()) == 0) {
+                if (id.compareTo(c.getId()) == 0) {
                     return false;
                 }
             }
 
             case "account":
             for (Account a : accounts) {
-                if (id.compareTo(a.getID()) == 0) {
+                if (id.compareTo(a.getId()) == 0) {
                     return false;
                 }
             }
@@ -128,5 +128,15 @@ public class Bank {
      */
     public void addNewAccount(Account newAccount) {
         accounts.add(newAccount);
+    }
+
+    public Customer checkLoginData(String id, String password) {
+
+        for (Customer customer : customers) {
+            if (id.compareTo(customer.getId()) == 0 && password.compareTo(customer.getPassword()) == 0) {
+                return customer;
+            }
+        }
+        return null;
     }
 }

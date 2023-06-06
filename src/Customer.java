@@ -39,7 +39,7 @@ public class Customer {
 
         this.firstName = firstName;
         this.lastName = lastName;
-        id = theBank.getNewCustomerID();
+        id = theBank.getNewCustomerId();
         this.password = password;
         accounts = new ArrayList<>();
 
@@ -53,7 +53,7 @@ public class Customer {
      * Get the ID number of the customer.
      * @return      the ID number
      */
-    public String getID() {
+    public String getId() {
         return id;
     }
 
