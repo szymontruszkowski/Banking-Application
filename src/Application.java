@@ -67,4 +67,30 @@ public class Application {
 
         theBank.addNewCustomer(firstName, lastName, password);
     }
+
+    public static Customer signIn(Bank theBank) {
+
+        Customer verifiedCustomer;
+        String id;
+        String password;
+
+        do {
+            System.out.print("Enter ID: ");
+            id = scanner.nextLine();
+            System.out.print("Enter password: ");
+            password = scanner.nextLine();
+
+            verifiedCustomer = theBank.checkLoginData(id, password);
+            if (verifiedCustomer == null) {
+                System.out.println("Invalid login data. Please try again.");
+            }
+        } while (verifiedCustomer == null);
+
+        System.out.printf("""
+                
+                Successful sign-in.
+                Hello %s %s!""", verifiedCustomer.getFirstName(), verifiedCustomer.getLastName());
+        System.out.println();
+        return verifiedCustomer;
+    }
 }
