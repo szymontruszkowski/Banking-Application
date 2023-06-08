@@ -51,6 +51,10 @@ public class Application {
         }
     }
 
+    /**
+     * Sign up a new customer of the bank.
+     * @param theBank       the bank where the customer wants to sign up
+     */
     public static void signUp(Bank theBank) {
 
         scanner.nextLine();
