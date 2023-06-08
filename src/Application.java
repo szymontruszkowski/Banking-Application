@@ -50,4 +50,17 @@ public class Application {
             signInUp(theBank);
         }
     }
+
+    public static void signUp(Bank theBank) {
+
+        scanner.nextLine();
+        System.out.print("Enter first name: ");
+        String firstName = scanner.nextLine();
+        System.out.print("Enter last name: ");
+        String lastName = scanner.nextLine();
+        System.out.print("Enter password: ");
+        String password = scanner.nextLine();
+
+        theBank.addNewCustomer(firstName, lastName, password);
+    }
 }
