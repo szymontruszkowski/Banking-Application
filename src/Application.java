@@ -68,6 +68,11 @@ public class Application {
         theBank.addNewCustomer(firstName, lastName, password);
     }
 
+    /**
+     * Sign in the customer of the bank.
+     * @param theBank       the bank where the customer wants to sign in
+     * @return              the signed-in customer
+     */
     public static Customer signIn(Bank theBank) {
 
         Customer verifiedCustomer;
