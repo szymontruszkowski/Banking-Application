@@ -18,7 +18,7 @@ public class Application {
     }
 
     /**
-     * Print the menu where customer need to choose to sign in or sign up
+     * Print the menu where customer need to choose to sign in or sign up.
      * @param theBank       the bank where the customer wants to sign in/up
      */
     public static void signInUp(Bank theBank) {

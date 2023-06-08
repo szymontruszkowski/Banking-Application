@@ -73,10 +73,18 @@ public class Customer {
         return password;
     }
 
+    /**
+     * Get the first name of the customer.
+     * @return      the first name
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * Get the last name of the customer.
+     * @return      the last name
+     */
     public String getLastName() {
         return lastName;
     }
