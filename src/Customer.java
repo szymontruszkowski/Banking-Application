@@ -88,4 +88,16 @@ public class Customer {
     public String getLastName() {
         return lastName;
     }
+
+    public void printAccountsSummary() {
+
+        System.out.printf("\n%s's accounts summary:\n", firstName);
+
+        int i = 1;
+        
+        for(Account account : accounts) {
+            System.out.printf("%d) %s\n", i++, account.getSummaryLine());
+        }
+        System.out.println();
+    }
 }
