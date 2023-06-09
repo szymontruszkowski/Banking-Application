@@ -94,4 +94,52 @@ public class Application {
         System.out.println();
         return verifiedCustomer;
     }
+
+    public static void printMainMenu(Bank theBank, Customer theCustomer) {
+
+        int choice;
+        theCustomer.printAccountsSummary();
+
+        do {
+            System.out.println("MAIN MENU");
+            System.out.println("""
+                      1. Create New Account
+                      2. Transaction History
+                      3. Deposit
+                      4. Withdraw
+                      5. Transfer
+                      6. Sign out
+                    """);
+
+            choice = scanner.nextInt();
+            if (choice < 1 || choice > 6) {
+                System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice < 1 || choice > 6);
+
+        switch (choice) {
+            case 1:
+                createNewAccount(theBank, theCustomer);
+                break;
+            case 2:
+                showTransHistory(theCustomer);
+                break;
+            case 3:
+                depositFunds(theCustomer);
+                break;
+            case 4:
+                withdrawFunds(theCustomer);
+                break;
+            case 5:
+                transferFunds(theCustomer);
+                break;
+            case 6:
+                scanner.nextLine();
+                break;
+        }
+
+        if (choice != 6) {
+            printMainMenu(theBank, theCustomer);
+        }
+    }
 }
