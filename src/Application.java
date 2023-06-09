@@ -67,7 +67,7 @@ public class Application {
     /**
      * Sign in the customer of the bank.
      * @param theBank       the bank where the customer wants to sign in
-     * @return              the signed-in customer
+     * @return              the signed in customer
      */
     public static Customer signIn(Bank theBank) {
 
@@ -95,6 +95,11 @@ public class Application {
         return verifiedCustomer;
     }
 
+    /**
+     * Print the main menu of the application.
+     * @param theBank           the bank where the customer is signed in
+     * @param theCustomer       the signed in customer
+     */
     public static void printMainMenu(Bank theBank, Customer theCustomer) {
 
         int choice;
