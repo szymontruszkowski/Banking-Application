@@ -38,12 +38,8 @@ public class Application {
         } while (choice < 1 || choice > 2);
 
         switch (choice) {
-            case 1:
-                scanner.nextLine();
-                break;
-            case 2:
-                signUp(theBank);
-                break;
+            case 1 -> scanner.nextLine();
+            case 2 -> signUp(theBank);
         }
 
         if (choice != 1) {
