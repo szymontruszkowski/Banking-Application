@@ -139,9 +139,9 @@ public class Bank {
      */
     public Customer checkLoginData(String id, String password) {
 
-        for (Customer customer : customers) {
-            if (id.compareTo(customer.getId()) == 0 && password.compareTo(customer.getPassword()) == 0) {
-                return customer;
+        for (Customer c : customers) {
+            if (id.compareTo(c.getId()) == 0 && password.compareTo(c.getPassword()) == 0) {
+                return c;
             }
         }
         return null;

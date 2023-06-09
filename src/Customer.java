@@ -98,8 +98,8 @@ public class Customer {
 
         int i = 1;
 
-        for(Account account : accounts) {
-            System.out.printf("%d) %s\n", i++, account.getSummaryLine());
+        for(Account a : accounts) {
+            System.out.printf("%d) %s\n", i++, a.getSummaryLine());
         }
         System.out.println();
     }
