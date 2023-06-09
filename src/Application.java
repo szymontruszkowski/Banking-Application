@@ -118,24 +118,12 @@ public class Application {
         } while (choice < 1 || choice > 6);
 
         switch (choice) {
-            case 1:
-                createNewAccount(theBank, theCustomer);
-                break;
-            case 2:
-                showTransHistory(theCustomer);
-                break;
-            case 3:
-                depositFunds(theCustomer);
-                break;
-            case 4:
-                withdrawFunds(theCustomer);
-                break;
-            case 5:
-                transferFunds(theCustomer);
-                break;
-            case 6:
-                scanner.nextLine();
-                break;
+            case 1 -> createNewAccount(theBank, theCustomer);
+            case 2 -> showTransHistory(theCustomer);
+            case 3 -> depositFunds(theCustomer);
+            case 4 -> withdrawFunds(theCustomer);
+            case 5 -> transferFunds(theCustomer);
+            case 6 -> scanner.nextLine();
         }
 
         if (choice != 6) {
