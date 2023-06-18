@@ -35,4 +35,8 @@ public class Transaction {
         this.title = title;
         account = theAccount;
     }
+
+    public double getAmount() {
+        return amount;
+    }
 }
