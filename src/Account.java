@@ -54,6 +54,10 @@ public class Account {
         return id;
     }
 
+    /**
+     * Get the summary line for the account.
+     * @return      the summary line
+     */
     public String getSummaryLine() {
 
         double balance = getBalance();
