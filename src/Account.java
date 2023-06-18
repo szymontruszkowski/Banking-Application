@@ -64,6 +64,10 @@ public class Account {
         return String.format("%s : %.02f%s : %s", id, balance, currency, type);
     }
 
+    /**
+     * Get the balance of the account.
+     * @return      the balance
+     */
     public double getBalance() {
 
         double balance = 0;
