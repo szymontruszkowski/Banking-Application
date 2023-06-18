@@ -53,4 +53,10 @@ public class Account {
     public String getId() {
         return id;
     }
+
+    public String getSummaryLine() {
+
+        double balance = getBalance();
+        return String.format("%s : %.02f%s : %s", id, balance, currency, type);
+    }
 }
