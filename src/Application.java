@@ -171,4 +171,34 @@ public class Application {
             case 3 -> createForeignCurrencyAccount(theBank, theCustomer);
         }
     }
+
+    public static void createForeignCurrencyAccount(Bank theBank, Customer theCustomer) {
+
+        int choice;
+        do {
+            System.out.println("  1. USD");
+            System.out.println("  2. EUR");
+            System.out.print("Select the currency of the account (1-2): ");
+
+            choice = scanner.nextInt();
+            if (choice < 1 || choice > 2) {
+                System.out.println("Invalid choice. Please try again.");
+            }
+        } while(choice < 1 || choice > 2);
+
+        switch (choice) {
+            case 1: {
+                Account USDAccount = new Account("Foreign Currency", "USD", theCustomer, theBank);
+                theBank.addNewAccount(USDAccount);
+                theCustomer.addNewAccount(USDAccount);
+                break;
+            }
+            case 2: {
+                Account EURAccount = new Account("Foreign Currency", "EUR", theCustomer, theBank);
+                theBank.addNewAccount(EURAccount);
+                theCustomer.addNewAccount(EURAccount);
+                break;
+            }
+        }
+    }
 }
