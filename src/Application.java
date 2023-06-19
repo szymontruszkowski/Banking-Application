@@ -136,6 +136,11 @@ public class Application {
         }
     }
 
+    /**
+     * Create a new account for signed-in customer.
+     * @param theBank           the bank where the customer is signed-in
+     * @param theCustomer       the signed-in customer
+     */
     public static void createNewAccount(Bank theBank, Customer theCustomer) {
 
         int choice;
