@@ -193,17 +193,15 @@ public class Application {
         } while(choice < 1 || choice > 2);
 
         switch (choice) {
-            case 1: {
+            case 1 -> {
                 Account USDAccount = new Account("Foreign Currency", "USD", theCustomer, theBank);
                 theBank.addNewAccount(USDAccount);
                 theCustomer.addNewAccount(USDAccount);
-                break;
             }
-            case 2: {
+            case 2 -> {
                 Account EURAccount = new Account("Foreign Currency", "EUR", theCustomer, theBank);
                 theBank.addNewAccount(EURAccount);
                 theCustomer.addNewAccount(EURAccount);
-                break;
             }
         }
     }
