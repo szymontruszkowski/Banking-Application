@@ -172,6 +172,12 @@ public class Application {
         }
     }
 
+
+    /**
+     * Create a new foreign currency account for signed-in customer.
+     * @param theBank           the bank where the customer is signed-in
+     * @param theCustomer       the signed-in customer
+     */
     public static void createForeignCurrencyAccount(Bank theBank, Customer theCustomer) {
 
         int choice;
