@@ -158,20 +158,17 @@ public class Application {
         } while (choice < 1 || choice > 3);
 
         switch (choice) {
-            case 1: {
+            case 1 -> {
                 Account savingsAccount = new Account("Savings", "PLN", theCustomer, theBank);
                 theBank.addNewAccount(savingsAccount);
                 theCustomer.addNewAccount(savingsAccount);
-                break;
             }
-            case 2: {
+            case 2 -> {
                 Account checkingAccount = new Account("Checking", "PLN", theCustomer, theBank);
                 theBank.addNewAccount(checkingAccount);
                 theCustomer.addNewAccount(checkingAccount);
-                break;
             }
-            case 3: createForeignCurrencyAccount(theBank, theCustomer);
-                break;
+            case 3 -> createForeignCurrencyAccount(theBank, theCustomer);
         }
     }
 }
