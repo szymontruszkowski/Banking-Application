@@ -135,4 +135,38 @@ public class Application {
             printMainMenu(theBank, theCustomer);
         }
     }
+
+    public static void createNewAccount(Bank theBank, Customer theCustomer) {
+
+        int choice;
+
+        do {
+            System.out.println("  1. Savings");
+            System.out.println("  2. Checking");
+            System.out.println("  3. Foreign Currency");
+            System.out.print("Select the type of the account (1-3): ");
+
+            choice = scanner.nextInt();
+            if (choice < 1 || choice > 3) {
+                System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice < 1 || choice > 3);
+
+        switch (choice) {
+            case 1: {
+                Account savingsAccount = new Account("Savings", "PLN", theCustomer, theBank);
+                theBank.addNewAccount(savingsAccount);
+                theCustomer.addNewAccount(savingsAccount);
+                break;
+            }
+            case 2: {
+                Account checkingAccount = new Account("Checking", "PLN", theCustomer, theBank);
+                theBank.addNewAccount(checkingAccount);
+                theCustomer.addNewAccount(checkingAccount);
+                break;
+            }
+            case 3: createForeignCurrencyAccount(theBank, theCustomer);
+                break;
+        }
+    }
 }
