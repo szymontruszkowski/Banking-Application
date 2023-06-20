@@ -104,6 +104,10 @@ public class Customer {
         System.out.println();
     }
 
+    /**
+     * Get the number of accounts of this customer.
+     * @return      the number of accounts
+     */
     public int numAccounts() {
         return accounts.size();
     }
