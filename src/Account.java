@@ -90,4 +90,12 @@ public class Account {
         }
         System.out.println();
     }
+
+    /**
+     * Get the currency of the account.
+     * @return      the currency
+     */
+    public String getCurrency() {
+        return currency;
+    }
 }
