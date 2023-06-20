@@ -112,6 +112,10 @@ public class Customer {
         return accounts.size();
     }
 
+    /**
+     * Call the printTransHistory() method for the particular account of this customer.
+     * @param acctIdx       the index of the account
+     */
     public void printAcctTransHistory(int acctIdx) {
         accounts.get(acctIdx).printTransHistory();
     }
