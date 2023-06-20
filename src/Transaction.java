@@ -44,6 +44,10 @@ public class Transaction {
         return amount;
     }
 
+    /**
+     * Get the summary line for the transaction.
+     * @return      the summary line
+     */
     public String getSummaryLine() {
         return String.format("%s : %.02f%s : %s", date, amount, account.getCurrency(), title);
     }

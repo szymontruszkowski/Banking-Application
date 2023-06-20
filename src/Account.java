@@ -79,6 +79,9 @@ public class Account {
         return balance;
     }
 
+    /**
+     * Print the summary line for each transaction of the account.
+     */
     public void printTransHistory() {
 
         System.out.printf("\nTransaction history for account %s\n", id);
