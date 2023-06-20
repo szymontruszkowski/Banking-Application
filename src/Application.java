@@ -211,7 +211,7 @@ public class Application {
         int acctIdx;
 
         do {
-            System.out.printf("Select the account (1-%d) %s: ", theCustomer.numAccounts(), action);
+            System.out.printf("Select the account (1-%d): ", theCustomer.numAccounts());
 
             acctIdx = scanner.nextInt() - 1;
             if (acctIdx < 0 || acctIdx >= theCustomer.numAccounts()) {

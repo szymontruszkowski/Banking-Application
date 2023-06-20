@@ -103,4 +103,8 @@ public class Customer {
         }
         System.out.println();
     }
+
+    public int numAccounts() {
+        return accounts.size();
+    }
 }
