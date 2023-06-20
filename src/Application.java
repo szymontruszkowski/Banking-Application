@@ -206,6 +206,10 @@ public class Application {
         }
     }
 
+    /**
+     * Show transaction history for the particular account of the customer
+     * @param theCustomer       the signed-in customer
+     */
     public static void showTransHistory(Customer theCustomer) {
 
         int acctIdx;
