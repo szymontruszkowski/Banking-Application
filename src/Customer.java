@@ -111,4 +111,8 @@ public class Customer {
     public int numAccounts() {
         return accounts.size();
     }
+
+    public void printAcctTransHistory(int acctIdx) {
+        accounts.get(acctIdx).printTransHistory();
+    }
 }
