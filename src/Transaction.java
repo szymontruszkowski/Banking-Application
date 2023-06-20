@@ -43,4 +43,8 @@ public class Transaction {
     public double getAmount() {
         return amount;
     }
+
+    public String getSummaryLine() {
+        return String.format("%s : %.02f%s : %s", date, amount, account.getCurrency(), title);
+    }
 }

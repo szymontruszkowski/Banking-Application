@@ -78,4 +78,13 @@ public class Account {
 
         return balance;
     }
+
+    public void printTransHistory() {
+
+        System.out.printf("\nTransaction history for account %s\n", id);
+        for (int t = transactions.size()-1; t >= 0; t--) {
+            System.out.println(transactions.get(t).getSummaryLine());
+        }
+        System.out.println();
+    }
 }
