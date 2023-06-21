@@ -226,6 +226,10 @@ public class Application {
         theCustomer.printAcctTransHistory(acctIdx);
     }
 
+    /**
+     * Deposit funds in the particular account of the customer.
+     * @param theCustomer       the signed-in customer
+     */
     public static void depositFunds(Customer theCustomer) {
 
         int inAcct;
