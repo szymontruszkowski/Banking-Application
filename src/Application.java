@@ -212,17 +212,7 @@ public class Application {
      */
     public static void showTransHistory(Customer theCustomer) {
 
-        int acctIdx;
-
-        do {
-            System.out.printf("Select the account (1-%d): ", theCustomer.numAccounts());
-
-            acctIdx = scanner.nextInt() - 1;
-            if (acctIdx < 0 || acctIdx >= theCustomer.numAccounts()) {
-                System.out.println("Invalid choice. Please try again.");
-            }
-        } while (acctIdx < 0 || acctIdx >= theCustomer.numAccounts());
-
+        int acctIdx = selectAccount(theCustomer, "which transactions you want to see");
         theCustomer.printAcctTransHistory(acctIdx);
     }
 
