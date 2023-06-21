@@ -268,4 +268,20 @@ public class Application {
 
         return acctIdx;
     }
+
+    public static double selectAmount(String action) {
+
+        double amount;
+
+        do {
+            System.out.printf("Enter the amount to %s: ", action);
+
+            amount = scanner.nextDouble();
+            if (amount <= 0) {
+                System.out.println("Amount must be greater than zero.");
+            }
+        } while (amount <= 0);
+
+        return amount;
+    }
 }
