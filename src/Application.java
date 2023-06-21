@@ -246,6 +246,13 @@ public class Application {
         theCustomer.addAcctTransaction(inAcct, amount, title);
     }
 
+    /**
+     * Select the particular account of the customer for further actions.
+     * @param theCustomer       the signed-in customer
+     * @param action            the action that will be performed
+     *                          on the selected account
+     * @return                  the index of selected account
+     */
     public static int selectAccount(Customer theCustomer, String action) {
 
         int acctIdx;
