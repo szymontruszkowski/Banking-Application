@@ -225,4 +225,20 @@ public class Application {
 
         theCustomer.printAcctTransHistory(acctIdx);
     }
+
+    public static void depositFunds(Customer theCustomer) {
+
+        int inAcct;
+        double amount;
+        String title;
+
+        inAcct = selectAccount(theCustomer, "to deposit in");
+        amount = selectAmount("deposit");
+
+        System.out.print("Enter title: ");
+        scanner.nextLine();
+        title = scanner.nextLine();
+
+        theCustomer.addAcctTransaction(inAcct, amount, title);
+    }
 }
