@@ -269,6 +269,12 @@ public class Application {
         return acctIdx;
     }
 
+    /**
+     * Select the amount of money for further actions.
+     * @param action        the action that will be performed
+     *                      on the selected amount of money
+     * @return              the amount
+     */
     public static double selectAmount(String action) {
 
         double amount;
