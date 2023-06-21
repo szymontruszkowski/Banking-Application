@@ -245,4 +245,20 @@ public class Application {
 
         theCustomer.addAcctTransaction(inAcct, amount, title);
     }
+
+    public static int selectAccount(Customer theCustomer, String action) {
+
+        int acctIdx;
+
+        do {
+            System.out.printf("Select the account (1-%d) %s: ", theCustomer.numAccounts(), action);
+
+            acctIdx = scanner.nextInt() - 1;
+            if (acctIdx < 0 || acctIdx >= theCustomer.numAccounts()) {
+                System.out.println("Invalid choice. Please try again.");
+            }
+        } while (acctIdx < 0 || acctIdx >= theCustomer.numAccounts());
+
+        return acctIdx;
+    }
 }
