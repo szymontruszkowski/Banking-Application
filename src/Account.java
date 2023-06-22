@@ -98,4 +98,10 @@ public class Account {
     public String getCurrency() {
         return currency;
     }
+
+    public void addTransaction(double amount, String title) {
+        
+        Transaction newTrans = new Transaction(amount, title, this);
+        transactions.add(newTrans);
+    }
 }
