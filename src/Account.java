@@ -99,8 +99,13 @@ public class Account {
         return currency;
     }
 
+    /**
+     * Create a new transaction and add it to the list of transactions.
+     * @param amount        the amount of the transaction
+     * @param title         the title of the transaction
+     */
     public void addTransaction(double amount, String title) {
-        
+
         Transaction newTrans = new Transaction(amount, title, this);
         transactions.add(newTrans);
     }
