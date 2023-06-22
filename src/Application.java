@@ -306,6 +306,12 @@ public class Application {
         theCustomer.addAcctTransaction(fromAcct, -1*amount, title);
     }
 
+    /**
+     * Check if the selected account of the customer is empty.
+     * @param theCustomer       the signed-in customer
+     * @param acctIdx           the index of the account to check
+     * @return                  true if the account is empty, or false, if it is not
+     */
     public static boolean isAcctEmpty(Customer theCustomer, int acctIdx) {
 
         if (theCustomer.getAccount(acctIdx).getBalance() == 0) {
