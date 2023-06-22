@@ -280,4 +280,25 @@ public class Application {
 
         return amount;
     }
+
+    public static void withdrawFunds(Customer theCustomer) {
+
+        int fromAcct;
+        double amount;
+        String title;
+        boolean isAcctEmpty;
+
+        do {
+            fromAcct = selectAccount(theCustomer, "to withdraw from");
+            isAcctEmpty = isAcctEmpty(theCustomer, fromAcct);
+        } while (isAcctEmpty);
+
+        amount = selectAmount(theCustomer, fromAcct, "withdraw");
+
+        System.out.print("Enter title: ");
+        scanner.nextLine();
+        title = scanner.nextLine();
+
+        theCustomer.addAcctTransaction(fromAcct, -1*amount, title);
+    }
 }
