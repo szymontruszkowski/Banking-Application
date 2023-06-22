@@ -305,4 +305,14 @@ public class Application {
 
         theCustomer.addAcctTransaction(fromAcct, -1*amount, title);
     }
+
+    public static boolean isAcctEmpty(Customer theCustomer, int acctIdx) {
+
+        if (theCustomer.getAccount(acctIdx).getBalance() == 0) {
+            System.out.println("The balance of the selected account is zero.");
+            System.out.println("Please select the other account.");
+            return true;
+        }
+        return false;
+    }
 }
