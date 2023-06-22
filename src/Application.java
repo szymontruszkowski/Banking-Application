@@ -281,6 +281,10 @@ public class Application {
         return amount;
     }
 
+    /**
+     * Withdraw funds from the particular account of the customer.
+     * @param theCustomer       the signed-in customer
+     */
     public static void withdrawFunds(Customer theCustomer) {
 
         int fromAcct;
