@@ -120,6 +120,12 @@ public class Customer {
         accounts.get(acctIdx).printTransHistory();
     }
 
+    /**
+     * Add the transaction for the particular account of the customer.
+     * @param acctIdx       the index of the account
+     * @param amount        the amount of the transaction
+     * @param title         the title of the transaction
+     */
     public void addAcctTransaction(int acctIdx, double amount, String title) {
         accounts.get(acctIdx).addTransaction(amount, title);
     }
