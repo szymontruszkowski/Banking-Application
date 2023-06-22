@@ -119,4 +119,8 @@ public class Customer {
     public void printAcctTransHistory(int acctIdx) {
         accounts.get(acctIdx).printTransHistory();
     }
+
+    public void addAcctTransaction(int acctIdx, double amount, String title) {
+        accounts.get(acctIdx).addTransaction(amount, title);
+    }
 }
