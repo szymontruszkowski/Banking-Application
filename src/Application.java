@@ -321,4 +321,27 @@ public class Application {
         }
         return false;
     }
+
+    public static double selectAmount(Customer theCustomer, int fromAcct, String action) {
+
+        double acctBal = theCustomer.getAcctBalance(fromAcct);
+        double amount;
+
+        Account theAcct = theCustomer.getAccount(fromAcct);
+
+        do {
+            System.out.printf("Enter the amount to %s (max %.02f%s): ", action, acctBal,
+                    theAcct.getCurrency());
+
+            amount = scanner.nextDouble();
+            if (amount <= 0) {
+                System.out.println("Amount must be greater than zero.");
+            } else if (amount > acctBal) {
+                System.out.printf("Amount must not be greater than balance of %.02f%s.\n", acctBal,
+                        theAcct.getCurrency());
+            }
+        } while (amount <= 0 || amount > acctBal);
+
+        return amount;
+    }
 }
