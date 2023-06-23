@@ -130,6 +130,11 @@ public class Customer {
         accounts.get(acctIdx).addTransaction(amount, title);
     }
 
+    /**
+     * Get the particular account of the customer.
+     * @param acctIdx       the index of the account
+     * @return              the account
+     */
     public Account getAccount(int acctIdx) {
         return accounts.get(acctIdx);
     }
