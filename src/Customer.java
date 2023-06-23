@@ -138,4 +138,8 @@ public class Customer {
     public Account getAccount(int acctIdx) {
         return accounts.get(acctIdx);
     }
+
+    public double getAcctBalance(int acctIdx) {
+        return accounts.get(acctIdx).getBalance();
+    }
 }
