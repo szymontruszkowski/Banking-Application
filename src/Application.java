@@ -322,6 +322,14 @@ public class Application {
         return false;
     }
 
+    /**
+     * The overloaded selectAmount() method with balance condition.
+     * @param theCustomer       the signed-in customer
+     * @param fromAcct          the account from which amount is taken
+     * @param action            the action that will be performed
+     *                          on the selected amount of money
+     * @return                  the amount
+     */
     public static double selectAmount(Customer theCustomer, int fromAcct, String action) {
 
         double acctBal = theCustomer.getAcctBalance(fromAcct);
