@@ -139,6 +139,11 @@ public class Customer {
         return accounts.get(acctIdx);
     }
 
+    /**
+     * Get the balance of the particular account of the customer.
+     * @param acctIdx       the index of the account
+     * @return              the balance
+     */
     public double getAcctBalance(int acctIdx) {
         return accounts.get(acctIdx).getBalance();
     }
