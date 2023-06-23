@@ -129,4 +129,8 @@ public class Customer {
     public void addAcctTransaction(int acctIdx, double amount, String title) {
         accounts.get(acctIdx).addTransaction(amount, title);
     }
+
+    public Account getAccount(int acctIdx) {
+        return accounts.get(acctIdx);
+    }
 }
