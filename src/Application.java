@@ -353,6 +353,10 @@ public class Application {
         return amount;
     }
 
+    /**
+     * Transfer funds between two accounts.
+     * @param theCustomer       the signed-in customer
+     */
     public static void transferFunds(Customer theCustomer) {
 
         int fromAcct;
