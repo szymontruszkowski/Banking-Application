@@ -148,6 +148,12 @@ public class Customer {
         return accounts.get(acctIdx).getBalance();
     }
 
+    /**
+     * Compare the currency of two selected accounts.
+     * @param acctIdx1      the index of the first account
+     * @param acctIdx2      the index of the second account
+     * @return              true if the currency is not the same, or false, if it is
+     */
     public boolean notSameCurrency(int acctIdx1, int acctIdx2) {
         return !accounts.get(acctIdx1).getCurrency().equalsIgnoreCase(accounts.get(acctIdx2).getCurrency());
     }
