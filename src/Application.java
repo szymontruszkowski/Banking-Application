@@ -352,4 +352,32 @@ public class Application {
 
         return amount;
     }
+
+    public static void transferFunds(Customer theCustomer) {
+
+        int fromAcct;
+        int toAcct;
+        double amount;
+        boolean isAcctEmpty;
+
+        do {
+            fromAcct = selectAccount(theCustomer, "to transfer from");
+            isAcctEmpty = isAcctEmpty(theCustomer, fromAcct);
+        } while(isAcctEmpty);
+
+        do {
+            toAcct = selectAccount(theCustomer, "to transfer to");
+            if (toAcct == fromAcct) {
+                System.out.println("You can't transfer funds to the same account.");
+            } else if (theCustomer.notSameCurrency(fromAcct, toAcct)){
+                System.out.println("Accounts must be the same currency.");
+            }
+        } while(toAcct == fromAcct || theCustomer.notSameCurrency(fromAcct, toAcct));
+        amount = selectAmount(theCustomer, fromAcct, "transfer");
+
+        theCustomer.addAcctTransaction(fromAcct, -1*amount,
+                String.format("Transfer to account: %s", theCustomer.getAcctId(toAcct)));
+        theCustomer.addAcctTransaction(toAcct, amount,
+                String.format("Transfer from account: %s", theCustomer.getAcctId(fromAcct)));
+    }
 }
