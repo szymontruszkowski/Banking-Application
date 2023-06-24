@@ -158,6 +158,11 @@ public class Customer {
         return !accounts.get(acctIdx1).getCurrency().equalsIgnoreCase(accounts.get(acctIdx2).getCurrency());
     }
 
+    /**
+     * Get the ID number of the particular account of the customer.
+     * @param acctIdx       the index of the account
+     * @return              the ID number
+     */
     public String getAcctId(int acctIdx) {
         return accounts.get(acctIdx).getId();
     }
