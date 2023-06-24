@@ -147,4 +147,8 @@ public class Customer {
     public double getAcctBalance(int acctIdx) {
         return accounts.get(acctIdx).getBalance();
     }
+
+    public boolean notSameCurrency(int acctIdx1, int acctIdx2) {
+        return !accounts.get(acctIdx1).getCurrency().equalsIgnoreCase(accounts.get(acctIdx2).getCurrency());
+    }
 }
