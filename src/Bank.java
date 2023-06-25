@@ -155,6 +155,10 @@ public class Bank {
         return name;
     }
 
+    /**
+     * Get the number of customers of the bank.
+     * @return      the number of customers
+     */
     public int numCustomers() {
         return customers.size();
     }
