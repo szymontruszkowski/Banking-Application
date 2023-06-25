@@ -38,7 +38,16 @@ public class Application {
         } while (choice < 1 || choice > 2);
 
         switch (choice) {
-            case 1 -> scanner.nextLine();
+            case 1 -> {
+                if (theBank.numCustomers() == 0) {
+                    System.out.println("\nYou are not registered yet.");
+                    System.out.println("Follow the instructions below to sign up.\n");
+                    signUp(theBank);
+                    signInUp(theBank);
+                } else {
+                    scanner.nextLine();
+                }
+            }
             case 2 -> signUp(theBank);
         }
 
