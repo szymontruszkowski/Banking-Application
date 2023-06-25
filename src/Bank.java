@@ -154,4 +154,8 @@ public class Bank {
     public String getName() {
         return name;
     }
+
+    public int numCustomers() {
+        return customers.size();
+    }
 }
