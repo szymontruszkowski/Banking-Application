@@ -166,4 +166,14 @@ public class Customer {
     public String getAcctId(int acctIdx) {
         return accounts.get(acctIdx).getId();
     }
+
+    public boolean isAccountsListEmpty() {
+
+        if(accounts.size() == 0) {
+            System.out.println("You don't have an account yet.");
+            System.out.println("Follow the instructions below to create one.");
+            return true;
+        }
+        return false;
+    }
 }
