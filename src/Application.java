@@ -140,7 +140,13 @@ public class Application {
                     showTransHistory(theCustomer);
                 }
             }
-            case 3 -> depositFunds(theCustomer);
+            case 3 -> {
+                if (theCustomer.isAccountsListEmpty()) {
+                    createNewAccount(theBank, theCustomer);
+                } else {
+                    depositFunds(theCustomer);
+                }
+            }
             case 4 -> withdrawFunds(theCustomer);
             case 5 -> transferFunds(theCustomer);
             case 6 -> scanner.nextLine();
