@@ -133,7 +133,13 @@ public class Application {
 
         switch (choice) {
             case 1 -> createNewAccount(theBank, theCustomer);
-            case 2 -> showTransHistory(theCustomer);
+            case 2 -> {
+                if (theCustomer.isAccountsListEmpty()) {
+                    createNewAccount(theBank, theCustomer);
+                } else {
+                    showTransHistory(theCustomer);
+                }
+            }
             case 3 -> depositFunds(theCustomer);
             case 4 -> withdrawFunds(theCustomer);
             case 5 -> transferFunds(theCustomer);
