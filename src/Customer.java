@@ -167,6 +167,10 @@ public class Customer {
         return accounts.get(acctIdx).getId();
     }
 
+    /**
+     * Check if the list of accounts is empty.
+     * @return      true, if it is, or false, if it is not
+     */
     public boolean isAccountsListEmpty() {
 
         if(accounts.size() == 0) {
