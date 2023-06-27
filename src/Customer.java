@@ -181,6 +181,12 @@ public class Customer {
         return false;
     }
 
+    /**
+     * Check if the customer has any cash.
+     * @return      true, if there is the cash on at
+     *              least one account of the customer, or false,
+     *              if the accounts of the customer are empty
+     */
     public boolean isThereAnyCash() {
 
         for (Account a : accounts) {
