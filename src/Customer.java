@@ -180,4 +180,14 @@ public class Customer {
         }
         return false;
     }
+
+    public boolean isThereAnyCash() {
+
+        for (Account a : accounts) {
+            if (a.getBalance() != 0) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
