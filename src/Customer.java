@@ -197,6 +197,10 @@ public class Customer {
         return false;
     }
 
+    /**
+     * Check if the customer has at least two accounts of the same currency.
+     * @return      true, if he has, or false, if he has not
+     */
     public boolean atLeastTwo() {
 
         int counterPLN = 0;
