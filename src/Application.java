@@ -147,7 +147,16 @@ public class Application {
                     depositFunds(theCustomer);
                 }
             }
-            case 4 -> withdrawFunds(theCustomer);
+            case 4 -> {
+                if (theCustomer.isAccountsListEmpty()) {
+                    createNewAccount(theBank, theCustomer);
+                } else if (theCustomer.isThereAnyCash()) {
+                    withdrawFunds(theCustomer);
+                } else {
+                    System.out.println("You have no funds in your accounts.");
+                    printMainMenu(theBank, theCustomer);
+                }
+            }
             case 5 -> transferFunds(theCustomer);
             case 6 -> scanner.nextLine();
         }
