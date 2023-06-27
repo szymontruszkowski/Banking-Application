@@ -196,4 +196,23 @@ public class Customer {
         }
         return false;
     }
+
+    public boolean atLeastTwo() {
+
+        int counterPLN = 0;
+        int counterUSD = 0;
+        int counterEUR = 0;
+
+        for (Account a : accounts) {
+            if (a.getCurrency().equalsIgnoreCase("PLN")) {
+                counterPLN++;
+            } else if (a.getCurrency().equalsIgnoreCase("USD")) {
+                counterUSD++;
+            } else if (a.getCurrency().equalsIgnoreCase("EUR")) {
+                counterEUR++;
+            }
+        }
+
+        return counterPLN >= 2 || counterUSD >= 2 || counterEUR >= 2;
+    }
 }
