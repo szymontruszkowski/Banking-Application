@@ -157,7 +157,19 @@ public class Application {
                     printMainMenu(theBank, theCustomer);
                 }
             }
-            case 5 -> transferFunds(theCustomer);
+            case 5 -> {
+                if (!theCustomer.atLeastTwo()) {
+                    System.out.println("You need to have at least two accounts of the same currency.");
+                    printMainMenu(theBank, theCustomer);
+                } else if (theCustomer.isAccountsListEmpty()) {
+                    createNewAccount(theBank, theCustomer);
+                } else if (theCustomer.isThereAnyCash()) {
+                    transferFunds(theCustomer);
+                } else {
+                    System.out.println("You have no funds in your accounts.");
+                    printMainMenu(theBank, theCustomer);
+                }
+            }
             case 6 -> scanner.nextLine();
         }
 
