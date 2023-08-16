@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Application {
@@ -23,18 +24,30 @@ public class Application {
      */
     public static void signInUp(Bank theBank) {
 
-        int choice;
+        int choice = 0;
+        boolean error = true;
 
         System.out.printf("\n\n * * * Welcome in %s * * *\n\n", theBank.getName());
-        do {
-            System.out.println("  1. Sign in");
-            System.out.println("  2. Sign up");
-            System.out.print("Select the option (1-2): ");
 
-            choice = scanner.nextInt();
-            if (choice < 1 || choice > 2) {
-                System.out.println("Invalid choice. Please try again.");
-            }
+        do {
+            do {
+                try {
+                    System.out.println("  1. Sign in");
+                    System.out.println("  2. Sign up");
+                    System.out.print("Select the option (1-2): ");
+
+                    choice = scanner.nextInt();
+                    error = false;
+
+                    if (choice < 1 || choice > 2) {
+                        System.out.println("Invalid choice. Please try again.");
+                    }
+
+                } catch (InputMismatchException e) {
+                    System.out.println("Error occurred. Only numbers are allowed.");
+                    scanner.next();
+                }
+            } while (error);
         } while (choice < 1 || choice > 2);
 
         switch (choice) {
