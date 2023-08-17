@@ -198,7 +198,8 @@ public class Application {
             System.out.println("  3. Foreign Currency");
             System.out.print("Select the type of the account (1-3): ");
 
-            choice = scanner.nextInt();
+            choice = inputInt();
+            
             if (choice < 1 || choice > 3) {
                 System.out.println("Invalid choice. Please try again.");
             }
