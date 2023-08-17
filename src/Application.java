@@ -432,6 +432,11 @@ public class Application {
                 String.format("Transfer from account: %s", theCustomer.getAcctId(fromAcct)));
     }
 
+    /**
+     * Check if the input is correct and if it is return it.
+     * Otherwise, prompt the customer to input only numbers.
+     * @return      the int input
+     */
     public static int inputInt() {
 
         int choice = 0;
