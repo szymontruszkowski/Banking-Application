@@ -129,7 +129,8 @@ public class Application {
                       6. Sign out
                     """);
 
-            choice = scanner.nextInt();
+            choice = inputInt();
+
             if (choice < 1 || choice > 6) {
                 System.out.println("Invalid choice. Please try again.");
             }
