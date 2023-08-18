@@ -322,7 +322,7 @@ public class Application {
         do {
             System.out.printf("Enter the amount to %s: ", action);
 
-            amount = scanner.nextDouble();
+            amount = inputDouble();
             if (amount <= 0) {
                 System.out.println("Amount must be greater than zero.");
             }
