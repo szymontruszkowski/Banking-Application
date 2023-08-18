@@ -234,7 +234,8 @@ public class Application {
             System.out.println("  2. EUR");
             System.out.print("Select the currency of the account (1-2): ");
 
-            choice = scanner.nextInt();
+            choice = inputInt();
+            
             if (choice < 1 || choice > 2) {
                 System.out.println("Invalid choice. Please try again.");
             }
