@@ -300,7 +300,7 @@ public class Application {
             System.out.printf("Select the account (1-%d) %s: ", theCustomer.numAccounts(), action);
 
             acctIdx = inputInt() - 1;
-            
+
             if (acctIdx < 0 || acctIdx >= theCustomer.numAccounts()) {
                 System.out.println("Invalid choice. Please try again.");
             }
@@ -456,5 +456,23 @@ public class Application {
         } while (!isInputCorrect);
 
         return choice;
+    }
+
+    public static double inputDouble() {
+
+        double input = 0;
+        boolean isInputCorrect = false;
+
+        do {
+            try {
+                input = scanner.nextDouble();
+                isInputCorrect = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Error occurred. Only numbers are allowed.");
+                scanner.next();
+            }
+        } while (!isInputCorrect);
+
+        return input;
     }
 }
