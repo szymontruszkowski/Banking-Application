@@ -235,7 +235,7 @@ public class Application {
             System.out.print("Select the currency of the account (1-2): ");
 
             choice = inputInt();
-            
+
             if (choice < 1 || choice > 2) {
                 System.out.println("Invalid choice. Please try again.");
             }
@@ -299,7 +299,8 @@ public class Application {
         do {
             System.out.printf("Select the account (1-%d) %s: ", theCustomer.numAccounts(), action);
 
-            acctIdx = scanner.nextInt() - 1;
+            acctIdx = inputInt() - 1;
+            
             if (acctIdx < 0 || acctIdx >= theCustomer.numAccounts()) {
                 System.out.println("Invalid choice. Please try again.");
             }
