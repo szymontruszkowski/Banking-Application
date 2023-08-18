@@ -458,6 +458,11 @@ public class Application {
         return choice;
     }
 
+    /**
+     * Check if the input is correct and if it is return it.
+     * Otherwise, prompt the customer to input only numbers.
+     * @return      the double input
+     */
     public static double inputDouble() {
 
         double input = 0;
