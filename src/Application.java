@@ -442,12 +442,12 @@ public class Application {
      */
     public static int inputInt() {
 
-        int choice = 0;
+        int input = 0;
         boolean isInputCorrect = false;
 
         do {
             try {
-                choice = scanner.nextInt();
+                input = scanner.nextInt();
                 isInputCorrect = true;
             } catch (InputMismatchException e) {
                 System.out.println("Error occurred. Only numbers are allowed.");
@@ -455,7 +455,7 @@ public class Application {
             }
         } while (!isInputCorrect);
 
-        return choice;
+        return input;
     }
 
     /**
